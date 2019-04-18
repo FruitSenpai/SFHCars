@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\harve\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj": {}
+    "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj": {}
   },
   "projects": {
-    "C:\\Users\\harve\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj": {
+    "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\harve\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj",
+        "projectUniqueName": "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj",
         "projectName": "SFHCars",
-        "projectPath": "C:\\Users\\harve\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj",
+        "projectPath": "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj",
         "packagesPath": "C:\\Users\\harve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\harve\\source\\repos\\SFHCars\\SFHCars\\obj\\",
+        "outputPath": "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

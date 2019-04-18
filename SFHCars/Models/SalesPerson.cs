@@ -7,5 +7,16 @@ namespace SFHCars.Models
 {
     public class SalesPerson
     {
+        private string name;
+        private string address;
+        private string cellno;
+        private double salary;
+        private double commission;
+
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Cellno { get; set; }
+        public double Salary { get; set; }
+        public double Commission { get; set; }
     }
 }
