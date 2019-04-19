@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SFHCars.Models
 {
-    public class Branch
+    public class Car
     {
         private string name;
         private string id;
