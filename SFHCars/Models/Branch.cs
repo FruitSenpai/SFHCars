@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace SFHCars.Models
 {
-    public class Car
+    public class Branch
     {
         private string name;
-        private string id;
+        private int id;
         private string location;
 
         public string Name { get; set; }
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Location { get; set; }
 
     }

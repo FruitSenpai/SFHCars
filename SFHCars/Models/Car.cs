@@ -13,6 +13,7 @@ namespace SFHCars.Models
         private double price;
         private double mileage;
         private int year;
+        public int id;
 
         public string Make{ get; set; }
         public string Model { get; set; }
@@ -20,5 +21,7 @@ namespace SFHCars.Models
         public double Price { get; set; }
         public double Mileage { get; set; }
         public int Year { get; set; }
+
+        public int Id { get; set; }
     }
 }

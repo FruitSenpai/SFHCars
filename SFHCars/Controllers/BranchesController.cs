@@ -10,22 +10,22 @@ using SFHCars.Models;
 
 namespace SFHCars.Controllers
 {
-    public class BranchController : Controller
+    public class BranchesController : Controller
     {
-        private readonly BranchContext _context;
+        private readonly SFHContext _context;
 
-        public BranchController(BranchContext context)
+        public BranchesController(SFHContext context)
         {
             _context = context;
         }
 
-        // GET: Branch
+        // GET: Branches
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Branch.ToListAsync());
+            return View(await _context.Branches.ToListAsync());
         }
 
-        // GET: Branch/Details/5
+        // GET: Branches/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,10 +34,7 @@ namespace SFHCars.Controllers
             }
 
             var branch = await _context.Branches
-         .Include(s => s.Salespersons)
-             .ThenInclude(e => e.Cars)
-         .AsNoTracking()
-         .SingleOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (branch == null)
             {
                 return NotFound();
@@ -46,33 +43,24 @@ namespace SFHCars.Controllers
             return View(branch);
         }
 
-        // GET: Branch/Create
+        // GET: Branches/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST:Branch/Create
-        
+        // POST: Branches/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EnrollmentDate,FirstMidName,LastName")] Car branch)//To Edit: bind with proper attributes 
+        public async Task<IActionResult> Create([Bind("Name,Id,Location")] Branch branch)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    _context.Add(branch);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
-            }
-            catch (DbUpdateException /* ex */)
-            {
-                //Log the error (uncomment ex variable name and write a log.
-                ModelState.AddModelError("", "Unable to save changes. " +
-                    "Try again, and if the problem persists " +
-                    "see your system administrator.");
+                _context.Add(branch);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
             return View(branch);
         }
@@ -94,35 +82,38 @@ namespace SFHCars.Controllers
         }
 
         // POST: Branches/Edit/5
-       
-        [HttpPost, ActionName("Edit")]
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditPost(int? id)
+        public async Task<IActionResult> Edit(int id, [Bind("Name,Id,Location")] Branch branch)
         {
-            if (id == null)
+            if (id != branch.Id)
             {
                 return NotFound();
             }
-            var branchToUpdate = await _context.Branches.SingleOrDefaultAsync(s => s.ID == id);
-            if (await TryUpdateModelAsync<Car>(
-                branchToUpdate,
-                "",
-                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate)) //edit with proper attributes
+
+            if (ModelState.IsValid)
             {
                 try
                 {
+                    _context.Update(branch);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateException /* ex */)
+                catch (DbUpdateConcurrencyException)
                 {
-                    //Log the error (uncomment ex variable name and write a log.)
-                    ModelState.AddModelError("", "Unable to save changes. " +
-                        "Try again, and if the problem persists, " +
-                        "see your system administrator.");
+                    if (!BranchExists(branch.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
+                return RedirectToAction(nameof(Index));
             }
-            return View(branchToUpdate);
+            return View(branch);
         }
 
         // GET: Branches/Delete/5
@@ -134,7 +125,7 @@ namespace SFHCars.Controllers
             }
 
             var branch = await _context.Branches
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (branch == null)
             {
                 return NotFound();
@@ -148,15 +139,15 @@ namespace SFHCars.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var branches = await _context.Branches.FindAsync(id);
-            _context.Branches.Remove(branches);
+            var branch = await _context.Branches.FindAsync(id);
+            _context.Branches.Remove(branch);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool BranchExists(int id)
         {
-            return _context.Branches.Any(e => e.ID == id);
+            return _context.Branches.Any(e => e.Id == id);
         }
     }
 }
