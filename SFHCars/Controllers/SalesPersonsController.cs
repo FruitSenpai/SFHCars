@@ -20,9 +20,17 @@ namespace SFHCars.Controllers
         }
 
         // GET: SalesPersons
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.SalesPeople.ToListAsync());
+            var salesperson = from s in _context.SalesPeople
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                salesperson = salesperson.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(await salesperson.ToListAsync());
         }
 
         // GET: SalesPersons/Details/5

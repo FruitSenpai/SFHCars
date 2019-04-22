@@ -35,7 +35,6 @@ C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\bin\Debug\netcoreapp2.2\SFHCars.
 C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\bin\Debug\netcoreapp2.2\SFHCars.pdb
 C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\bin\Debug\netcoreapp2.2\SFHCars.Views.dll
 C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\bin\Debug\netcoreapp2.2\SFHCars.Views.pdb
-C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\SFHCars.csprojAssemblyReference.cache
 C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\SFHCars.csproj.CoreCompileInputs.cache
 C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\SFHCars.RazorAssemblyInfo.cache
 C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\SFHCars.RazorAssemblyInfo.cs
@@ -103,3 +102,19 @@ C:\Users\Shivesh Lappie\source\repos\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Raz
 C:\Users\Shivesh Lappie\source\repos\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Details.g.cshtml.cs
 C:\Users\Shivesh Lappie\source\repos\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Edit.g.cshtml.cs
 C:\Users\Shivesh Lappie\source\repos\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Index.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Branches\Create.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Branches\Delete.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Branches\Details.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Branches\Edit.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Branches\Index.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Cars\Create.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Cars\Delete.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Cars\Details.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Cars\Edit.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\Cars\Index.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Create.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Delete.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Details.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Edit.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\Razor\Views\SalesPersons\Index.g.cshtml.cs
+C:\Users\harve\Documents\GitHub\SFHCars\SFHCars\obj\Debug\netcoreapp2.2\SFHCars.csprojAssemblyReference.cache

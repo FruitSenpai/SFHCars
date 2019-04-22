@@ -9,6 +9,13 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="Branches" asp-action="Index">
+    <p>
+        Location: <input type="text" name="SearchStringl">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>

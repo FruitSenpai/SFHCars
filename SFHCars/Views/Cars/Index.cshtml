@@ -9,6 +9,12 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-controller="Cars" asp-action="Index">
+    <p>
+        Model: <input type="text" name="SearchStringm">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>

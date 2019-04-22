@@ -20,13 +20,20 @@ namespace SFHCars.Controllers
         }
 
         // GET: Cars
-        public async Task<IActionResult> Index(string Sort, string filter, string search, int? pagenum)
+        public async Task<IActionResult> Index(string Sort, string filter, string search, int? pagenum, string searchString)
         {
             ViewData["CurrentSort"] = Sort;
 
             var cars = from c in _context.Cars select c;
 
-            if(search != null)
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                cars = cars.Where(s => s.Model.Contains(searchString));
+            }
+
+           // return View(await cars.ToListAsync());
+
+            if (search != null)
             {
                 pagenum = 1;
 
@@ -39,8 +46,14 @@ namespace SFHCars.Controllers
             int page = 3;
 
             return View(await Pagination<Car>.CreateAsync(cars.AsNoTracking(),pagenum ?? 1, page));
-        }
+            return View(await cars.ToListAsync());
 
+
+
+
+
+        }
+        
         // GET: Cars/Details/5
         public async Task<IActionResult> Details(int? id)
         {

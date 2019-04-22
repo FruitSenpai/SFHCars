@@ -20,9 +20,17 @@ namespace SFHCars.Controllers
         }
 
         // GET: Branches
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Branches.ToListAsync());
+            var branches = from m in _context.Branches
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                branches = branches.Where(s => s.Location.Contains(searchString));
+            }
+
+            return View(await branches.ToListAsync());
         }
 
         // GET: Branches/Details/5

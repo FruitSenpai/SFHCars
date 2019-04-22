@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shivesh Lappie\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj": {}
+    "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shivesh Lappie\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj": {
+    "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shivesh Lappie\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj",
+        "projectUniqueName": "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj",
         "projectName": "SFHCars",
-        "projectPath": "C:\\Users\\Shivesh Lappie\\source\\repos\\SFHCars\\SFHCars\\SFHCars.csproj",
-        "packagesPath": "C:\\Users\\Shivesh Lappie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shivesh Lappie\\source\\repos\\SFHCars\\SFHCars\\obj\\",
+        "projectPath": "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\SFHCars.csproj",
+        "packagesPath": "C:\\Users\\harve\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harve\\Documents\\GitHub\\SFHCars\\SFHCars\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shivesh Lappie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\harve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
