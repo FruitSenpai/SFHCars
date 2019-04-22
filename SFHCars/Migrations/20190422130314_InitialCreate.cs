@@ -37,6 +37,7 @@ namespace SFHCars.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Car", x => x.Id);
+
                 });
 
             migrationBuilder.CreateTable(

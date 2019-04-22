@@ -30,5 +30,9 @@ namespace SFHCars.Models
         public int Year { get; set; }
 
         public int Id { get; set; }
+
+        public int BranchId { get; set; }
+        public Branch Branch { get; set; }
+        //public ICollection<Branch> Branches { get; set; }
     }
 }

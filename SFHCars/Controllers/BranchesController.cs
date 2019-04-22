@@ -22,8 +22,8 @@ namespace SFHCars.Controllers
         // GET: Branches
         public async Task<IActionResult> Index(string searchString)
         {
-            var branches = from m in _context.Branches
-                         select m;
+            var branches = from b in _context.Branches
+                           select b;
 
             if (!String.IsNullOrEmpty(searchString))
             {

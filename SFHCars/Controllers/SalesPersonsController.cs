@@ -23,7 +23,7 @@ namespace SFHCars.Controllers
         public async Task<IActionResult> Index(string searchString)
         {
             var salesperson = from s in _context.SalesPeople
-                           select s;
+                              select s;
 
             if (!String.IsNullOrEmpty(searchString))
             {

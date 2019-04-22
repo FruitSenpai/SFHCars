@@ -1,4 +1,4 @@
-﻿@model Pagination<SFHCars.Models.Car>
+﻿@model IEnumerable<SFHCars.Models.Car>
 
 @{
     ViewData["Title"] = "Index";
@@ -11,7 +11,7 @@
 </p>
 <form asp-controller="Cars" asp-action="Index">
     <p>
-        Model: <input type="text" name="SearchStringm">
+        Model: <input type="text" name="SearchString">
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -19,10 +19,10 @@
     <thead>
         <tr>
             <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Model</a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Make</a>
             </th>
             <th>
-                Make
+                Model
             </th>
             <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Variant</a>
@@ -35,6 +35,11 @@
             </th>
             <th>
                 Year
+            </th>
+            <th>
+            
+                @Html.DisplayNameFor(model => model.Branch.Name )
+            
             </th>
         </tr>
     </thead>
@@ -61,6 +66,9 @@
                     @Html.DisplayFor(modelItem => item.Year)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.Branch.Name)
+                </td>
+                <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
@@ -70,22 +78,4 @@
     </tbody>
 </table>
 
-@{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-}
 
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-pageNumber="@(Model.PageIndex - 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @prevDisabled">
-    Previous
-</a>
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-pageNumber="@(Model.PageIndex + 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @nextDisabled">
-    Next
-</a>
